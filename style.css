@@ -53,13 +53,18 @@ body{
     width: fit-content;
     margin: auto;
     margin-top: 10vh;
+   
 }
+
+
 .calculator{
     width: 600px;
     height: 450px;
     background-color:var(--White);
     border-radius: 4%;
     padding: 2px;
+    position: relative;
+    padding: 20px;
 }
 
 .texts{

@@ -1,68 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+  <link rel="stylesheet" href="style.css" />
   <title>Frontend Mentor | Age calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
-<body>
+
+<body> 
   
   <div class="container">
-  <div class="calculator">
-<form>
-    <div class="texts">
-    <span>DAY</span>
-    <span>MONTH</span>
-    <span>YEAR</span>
-  </div>
+    <div class="calculator">
+     
+        <div class="texts">
+          <span>DAY</span>
+          <span>MONTH</span>
+          <span>YEAR</span>
+        </div>
+        <form>
+        <div class="inputs">
+          <input id="day" type="text" placeholder="DD" required />
+          <input id="month" type="text" placeholder="MM" required />
+          <input id="year" type="text" placeholder="YYYY" required />
+        </div>
 
-  
-      <div class="inputs">
-  
-      <input id="day" type="text" placeholder="DD" required class="my-input">
-    
-      <input id="month" type="text" placeholder="MM" required class="my-input">
+        <div class="error">
+          <span id="dayError" class="error"></span>
+          <span id="monthError" class="error"></span>
+          <span id="yearError" class="error"></span>
+        </div>
+
+        <button class="button" type="button" onclick="calc()">
+          <div class="img-container">
+            <img src="assets/images/icon-arrow.svg" alt="" />
+          </div>
+        </button>
+      </form>
+        <hr />
+        <div class="result">
+          <h1 class="result"><span id="ageyear">--</span>years</h1>
+          <h1 class="result"><span id="agemonth">--</span>months</h1>
+          <h1 class="result"><span id="ageday">--</span>days</h1>
+        </div>
       
-      <input id="year" type="text" placeholder="YYYY" required class="my-input">
-      
-      </div>
-
-      <div class="error">
-        <span id="dayError" class="error"></span>
-        <span id="monthError" class="error"></span>
-        <span id="yearError" class="error"></span>
-      </div>
-
-
-
-      <button class="button" type="button" onclick="calc()">
-        <div class="img-container"><img src="assets/images/icon-arrow.svg" alt=""></div>
-    </button>
-
-      <hr> 
-      <div class=" result">
-     <h1 class="result"><span id="ageyear">--</span>years</h1>
-     <h1 class="result"><span id="agemonth">--</span>months</h1>
-     <h1 class="result"><span id="ageday">--</span>days</h1>
     </div>
-      
-    </form>
-  </div>
-
   </div>
 
   <script src="script.js"></script>
 </body>
+
 </html>
-
-
-

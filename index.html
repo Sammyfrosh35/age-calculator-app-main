@@ -28,23 +28,36 @@
   <div class="container">
     <div class="calculator">
      
-        <div class="texts">
-          <span>DAY</span>
-          <span>MONTH</span>
-          <span>YEAR</span>
+      <div class="row">
+        <div class="col">
+          <label for="day">DAY</label>
+          <!-- <br> -->
+          <input type="number" name="" id="day" placeholder="DD" maxlength="2">
+          <div class="empty__string__text">This field is required</div>
+          <div class="invalid__string__day">Must be a valid day</div>
+          <div class="invalid__string__whole">Must be a valid date</div>
         </div>
-        <form>
-        <div class="inputs">
-          <input id="day" type="text" placeholder="DD" required />
-          <input id="month" type="text" placeholder="MM" required />
-          <input id="year" type="text" placeholder="YYYY" required />
+        
+        <div class="col">
+          <label for="month">MONTH</label>
+          <!-- <br> -->
+          <input type="number" name="" id="month" placeholder="MM" maxlength="2">
+          <div class="empty__string__text">This field is required</div>
+          <div class="invalid__string__month">Must be a valid month</div>
         </div>
+        
+        <div class="col">
+          <label for="year">YEAR</label>
+          <!-- <br> -->
+          <input type="number" name="" id="year" placeholder="YYYY" maxlength="4">
+          <div class="empty__string__text">This field is required</div>
+          <div class="invalid__string__year">Must be in the past</div>
+        </div>
+      </div>
 
-        <div class="error">
-          <span id="dayError" class="error"></span>
-          <span id="monthError" class="error"></span>
-          <span id="yearError" class="error"></span>
-        </div>
+
+
+
 
         <button class="button" type="button" onclick="calc()">
           <div class="img-container">
@@ -52,11 +65,13 @@
           </div>
         </button>
       </form>
+
         <hr />
-        <div class="result">
-          <h1 class="result"><span id="ageyear">--</span>years</h1>
-          <h1 class="result"><span id="agemonth">--</span>months</h1>
-          <h1 class="result"><span id="ageday">--</span>days</h1>
+
+        <div class="results">
+          <p><span class="yearResult counter" data-count="">- -</span> years</p>
+          <p><span class="monthResult counter" data-count="">- -</span> months</p>
+          <p><span class="daysResult counter" data-count="">- -</span> days</p>
         </div>
       
     </div>

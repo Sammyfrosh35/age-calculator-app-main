@@ -1,31 +1,5 @@
-@font-face {
-    font-family: "Poppins-Bold";
-    src: url("/assets/fonts/Poppins-Bold.ttf");
-  }
-  @font-face {
-    font-family: "Poppins-BoldItalic";
-    src: url("/assets/fonts/Poppins-BoldItalic.ttf");
-  }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,800&display=swap');
 
-@font-face {
-  font-family: "Poppins-ExtraBold";
-  src: url("/assets/fonts/Poppins-ExtraBold.ttf");
-}
-
-@font-face {
-  font-family: "Poppins-ExtraBoldItalic";
-  src: url("/assets/fonts/Poppins-ExtraBoldItalic.ttf");
-}
-@font-face {
-    font-family: "Poppins-Italic";
-    src: url("/assets/fonts/Poppins-Italic.ttf");
-  }
-  
-  @font-face {
-    font-family: "Poppins-Regular";
-    src: url("/assets/fonts/Poppins-Regular.ttf");
-  }
-  
   /* *{
     padding: 0;
      margin: 0 auto;
@@ -45,6 +19,7 @@
 }
 
 body{
+  font-family: 'Poppins';
     background-color: var(--OffWhite); 
 }
 
@@ -58,77 +33,76 @@ body{
 
 
 .calculator{
-    width: 600px;
-    height: 450px;
-    background-color:var(--White);
-    border-radius: 4%;
-    padding: 2px;
-    position: relative;
-    padding: 20px;
+  width:100%;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px 20px 139px 20px;
+  padding: 40px;
+  margin:100px auto;
 }
 
-.texts{
-    display:flex;
-    font-size: 10px;
-    font-weight: 600;
-    font-family: "Poppins-Regular";
-    color: var(--Smokeygrey);
-   flex-direction: row;
-   margin-top: 7%;
+
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 10.733vw);
 }
 
-.texts span{
-    padding-left: 5%;
-    margin-right:18%;
- 
+label {
+  color: hsl(0, 1%, 44%);
+  font-weight:700;
+  font-size: 15px;
+  letter-spacing: 1.5px;
 }
 
-.inputs{
-    width: fit-content; 
-    flex-direction: row;
-    display: flex;
-    gap: 1rem; 
-    padding-left: 5%;
-    
+input {
+  width: 70%;
+  font-size: 28px;
+  font-weight: 700;
+  color: hsl(0, 0%, 8%);
+  padding: 15px;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 7px;
+  margin: 0.45rem 0 0.5rem 0;
+  
+}
+::placeholder {
+  color: hsl(0, 1%, 44%);
 }
 
-.inputs input{
-    width: 90px;
-    height: 45px;
-    color: var(--Offblack);
-    font-weight: 400;
-    font-size: 18px;
-    font-family:"Poppins-ExtraBold";
-    border-radius: 5px;
-    border-color: var(--OffWhite);
-    padding-left: 7%;
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
 }
-input:hover {
-    cursor: pointer;
-    border-color: var(--Purple);
-  }
+
+input[type=number] {
+  appearance: textfield;
+}
+input:hover,
+input:focus {
+  border-color: hsl(259, 100%, 65%);
+  outline-color: hsl(259, 100%, 65%);
+  cursor: pointer;
+}
+
 
 hr{
-   margin: 6%;
+   margin-top: 5%;
    padding-right: 1rem;
    border-color: white;
+   margin-left: 0.9%;
    
 }
+.results {
+  font-weight: 800;
+  font-size: 40px;
+  font-style: italic;
+  margin-bottom: 0;
+  padding-bottom: 0;
 
-h1{
-     font-family: "Poppins-ExtraBoldItalic";
-    font-weight: 800;
-    font-size: 60px;
-    padding-left: 5%;
-    margin-bottom: 0; 
-    margin-top: 0; 
 }
 
-h1 span{
-    color: var(--Purple);
-    font-weight: 800;
-    margin-bottom: 0; 
-    margin-top: 0; 
+.results span { 
+  color: hsl(259, 100%, 65%);
 }
 
 .button{
@@ -140,6 +114,7 @@ h1 span{
   height: 50px;
   text-align: center;
   margin-right:4%;
+  cursor: pointer !important;
 
 }
 
@@ -154,23 +129,257 @@ h1 span{
 }
 
 
-.error {
-  font-size: 0.7em;
-  margin-top: 0.2em;
-  font-family: "Poppins-Regular";
-   color: red; 
-    display: flex;
-    flex-direction: row;
-    gap: 1rem; 
-    margin-right: 5%;
-    padding-left: 1rem;
+/* erroor messages */
+.empty__string-input {
+  border-color: hsl(0, 100%, 67%);
+}
+.empty__string-label {
+  color: hsl(0, 100%, 67%);
+}
+.empty__string-input:hover,
+.empty__string-input:focus {
+  border-color: hsl(0, 100%, 67%);
+  outline-color: hsl(0, 100%, 67%);
+}
+.empty__string__text,
+.invalid__string__whole,
+.invalid__string__day,
+.invalid__string__month,
+.invalid__string__year {
+  color: hsl(0, 100%, 67%);
+  font-size: 13px;
+  font-style: italic;
+  display: none;
 }
 
 
 
 
-.inputs input:focus{
-    outline:var(--Purple);
-    
-    
-} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1440px) {
+  section {
+      width: 47%;
+  }
+
+  .wrapper:before {
+      width: 450px;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  section {
+      width: 50%;
+  }
+
+  .wrapper:before {
+      width: 398px;
+  }
+}
+@media only screen and (max-width: 1149px) {
+  section {
+      width: 55%;
+  }
+
+  .row {
+      grid-template-columns: repeat(3, 11.733vw);
+  }
+
+  .wrapper:before {
+      width: 420px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  section {
+      width: 60%;
+  }
+
+  .row {
+      grid-template-columns: repeat(3, 13.733vw);
+  }
+  input {
+      padding: 13px; font-size: 26px;
+  }
+
+  .wrapper:before {
+      width: 411px;
+  }
+  button {
+      height: 80px; width: 82px;
+  }
+
+  .results {
+      font-size: 70px;
+  }
+}
+@media only screen and (max-width: 896px) {
+  section {
+      width: 65%;
+  }
+
+  .row {
+      grid-template-columns: repeat(3, 14.733vw);
+  }
+
+  .wrapper:before {
+      width: 347px;
+  }
+}
+@media only screen and (max-width: 768px){
+  section {
+      width: 70%;
+  }
+
+  .row {
+      grid-template-columns: repeat(3, 15.733vw);
+  }
+
+  .wrapper:before {
+      width: 276px;
+  }
+  button {
+      height: 75px; width: 77px;
+  }
+}
+@media only screen and (max-width: 597px){
+  section {
+      width: 75%; padding: 30px;
+  }
+
+  .row {
+      grid-template-columns: repeat(3, 18.733vw);
+  }
+  label {
+      letter-spacing: 1px; font-size: 13px;
+  }
+  input {
+      padding: 10px; font-size: 23px;
+  }
+
+  .wrapper:before {
+      width: 273px;
+  }
+  button {
+      height: 65px; width: 67px;
+  }
+
+  .results {
+      font-size: 65px;
+  }
+}
+@media only screen and (max-width: 431px) {
+  section {
+      width: 92%; 
+      padding:50px 20px;
+      border-radius: 20px 20px 110px 20px;
+  }
+
+  .row {
+      grid-template-columns: repeat(3, 25.733vw); 
+      justify-content: space-evenly;
+  }
+  label {
+      letter-spacing: 1.5px;
+  }
+
+  input {
+      padding: 15px;
+      font-size: 21px;
+  }
+
+  .wrapper {
+      margin: 30px 0;
+  }
+  button {
+      height: 65px; 
+      width: 67px;
+  }
+  svg {
+      width: 26px; 
+      height: 24px;
+  }
+  .wrapper:before {
+      width: 130px;
+  }
+  .wrapper:after {
+      display: inline-block;
+      content: " ";
+      height: 2px;
+      width: 130px;
+      background-color: hsl(0, 0%, 86%);
+      vertical-align: text-top;
+  }
+}
+@media only screen and (max-width: 390px) {
+  .wrapper:before, .wrapper:after{
+      width: 113px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  input {
+      font-size: 18px;
+  }
+  .wrapper:before, .wrapper:after{
+      width: 108px;
+  }
+  .results {
+      font-size: 56px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  section {
+      width: 97%;
+      border-radius: 20px 20px 95px 20px;
+  }
+
+  .row {
+      grid-template-columns: repeat(3, 27.733vw); 
+      justify-content: space-evenly;
+  }
+  label {
+      font-size: 11px;
+  }
+  input {
+      font-size: 15px;
+  }
+
+  .wrapper:before, .wrapper:after {
+      width: 96px;
+  }
+
+  .results {
+      font-size: 56px;
+  }
+}
+@media only screen and (max-width: 280px) {
+  input {
+      padding: 13px;
+      font-size: 14px;
+  }
+
+  .wrapper:before, .wrapper:after {
+      width: 78px;
+  }
+  button {
+      height: 60px;
+      width: 62px;
+  }
+
+  .results {
+      font-size: 53px;
+  }
+}

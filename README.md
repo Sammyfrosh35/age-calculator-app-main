@@ -54,8 +54,8 @@ chat GPT mdn doc website.
 
 ## Author
 
-- Website - [Samuel Osaronungwe](https://my-portfolio-three-phi-24.vercel.app/)
-- Twitter - [@sammy_o_osaro](https://twitter.com/Sammypipz)
+- Website - [Badejo samuel](https://my-portfolio-three-phi-24.vercel.app/)
+- Twitter - [@sammypipz](https://twitter.com/Sammypipz)
 
 ## Acknowledgments
 thanks to frontend mentor.
